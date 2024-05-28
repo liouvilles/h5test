@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirect to App Detail Page</title>
+</head>
+<body>
+<script>
+(function() {
+  // 替换 YOUR_PACKAGE_ID 为目标应用的包名（例如 com.example.app）
+  var packageId = "com.sensemobile.action";
+
+ 
+  // Android 跳转链接
+  var androidUrl = "market://details?id=" + packageId;
+  // iOS 跳转链接
+ // var iOSUrl = "itms-apps://itunes.apple.com/app/id" + packageId;
+
+  // 跳转函数
+  function redirectToAppStore() {
+     window.location.href = androidUrl;
+  }
+
+  // 调用跳转函数
+  redirectToAppStore();
+})();
+</script>
+</body>
+</html>
